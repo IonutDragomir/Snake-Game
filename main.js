@@ -8,7 +8,6 @@ let snakeBody = [
 ];
 let directionOfTheMovingSnake = "right1";
 let appleWasEat = false;
-console.log(snakeBody[0].column);
 let callRepaintWindow;
 let deadSnake = 0;
 
@@ -22,7 +21,6 @@ function start(curentTime) {
   lastTimeRegistered = curentTime;
   document.getElementById("grid").innerHTML = `<img src="/terrain.png">`;
   drawSnake();
-  console.log(snakeBody);
   if (appleWasEat) {
     createFood();
     appleWasEat = false;
