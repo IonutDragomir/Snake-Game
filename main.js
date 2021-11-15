@@ -12,8 +12,8 @@ console.log(snakeBody[0].column);
 let callRepaintWindow;
 let deadSnake = 0;
 
-function snake(curentTime) {
-  callRepaintWindow = window.requestAnimationFrame(snake);
+function start(curentTime) {
+  callRepaintWindow = window.requestAnimationFrame(start);
   window.addEventListener("keydown", checkKey, false);
   let secondsSinceLastRender = (curentTime - lastTimeRegistered) / 1000;
   if (secondsSinceLastRender < 1 / snakeSpeed) {
@@ -201,4 +201,4 @@ function stop() {
   <img class="bang" src="/GameOver.png" alt="">`;
 }
 
-snake();
+start();
